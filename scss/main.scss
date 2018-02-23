@@ -54,6 +54,14 @@ body {
       -moz-transition: all .35s;
       -webkit-transition: all .35s;
       background: rgba(43, 10, 61,.7);
+
+      .expand {
+        color: #fff;
+        cursor: pointer;
+        font-size: 2rem;
+        background: none;
+        border-radius: 50%;
+      }
     }
 
     aside {
