@@ -16,19 +16,34 @@ body {
     .grid-container {
       grid-template-columns: 1fr; } }
   .grid-container .recipe-card {
+    margin: 10px;
     display: grid;
-    padding: 10px;
+    position: relative;
     border-radius: 5px;
+    height: max-content;
     justify-items: center; }
     .grid-container .recipe-card img {
       width: 100%;
-      box-shadow: 0 2px 5px #333; }
+      box-shadow: 5px 5px 20px #333; }
     .grid-container .recipe-card h3 {
-      margin: 5px 0; }
-    .grid-container .recipe-card aside {
+      margin: 10px 0; }
+    .grid-container .recipe-card:hover .overlay {
+      opacity: 1; }
+    .grid-container .recipe-card .overlay {
+      opacity: 0;
       width: 100%;
-      color: #333;
+      height: 100%;
+      color: #fff;
+      position: absolute;
+      text-align: center;
+      transition: all .35s;
+      -moz-transition: all .35s;
+      -webkit-transition: all .35s;
+      background: rgba(43, 10, 61, 0.7); }
+    .grid-container .recipe-card aside {
+      color: #fff;
       display: grid;
+      margin: 0 10px;
       grid-template-columns: 1fr 1fr; }
       .grid-container .recipe-card aside .time {
         text-align: left; }
