@@ -45,7 +45,10 @@ body {
         cursor: pointer;
         font-size: 2rem;
         background: none;
-        border-radius: 50%; }
+        border-radius: 50%;
+        border-color: #fff; }
+        .grid-container .recipe-card .overlay .expand:active {
+          border-style: double; }
     .grid-container .recipe-card aside {
       color: #fff;
       display: grid;
