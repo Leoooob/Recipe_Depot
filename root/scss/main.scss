@@ -61,6 +61,11 @@ body {
         font-size: 2rem;
         background: none;
         border-radius: 50%;
+        border-color: #fff;
+
+        &:active {
+          border-style: double;
+        }
       }
     }
 
