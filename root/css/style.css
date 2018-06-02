@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'SourceSans';
+  src: url("../assets/fonts/SourceSansVariable-Roman.ttf") format("truetype"); }
+
+html {
+  font-family: 'SourceSans', sans-serif; }
+
 h1 {
   margin: 5px 0;
   color: #f05f40; }
@@ -9,13 +16,13 @@ body {
   display: grid;
   grid-gap: 15px 10px;
   color: #f05f40;
-  grid-template-columns: 1fr 1fr 1fr; }
+  grid-template-columns: repeat(3, 300px); }
   @media screen and (max-width: 800px) {
     .grid-container {
-      grid-template-columns: 1fr 1fr; } }
+      grid-template-columns: repeat(2, 300px); } }
   @media screen and (max-width: 500px) {
     .grid-container {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 300px; } }
   .grid-container .newCard {
     display: grid;
     position: relative;
@@ -72,9 +79,10 @@ body {
         display: grid;
         grid-template-rows: auto max-content; }
         .grid-container .newCard .cardAuthor .authorDetails p {
-          margin: 0; }
+          margin: 0;
+          font-size: 18px; }
         .grid-container .newCard .cardAuthor .authorDetails .authorName {
-          align-self: center; }
+          align-self: end; }
         .grid-container .newCard .cardAuthor .authorDetails .authorSocials {
           cursor: pointer; }
   .grid-container .recipe-card {

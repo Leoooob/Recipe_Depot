@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'SourceSans';
+  src: url('../assets/fonts/SourceSansVariable-Roman.ttf') format('truetype');
+}
+
+html {
+  font-family: 'SourceSans', sans-serif;
+}
+
 h1 {
   margin: 5px 0;
   color: #f05f40;
@@ -11,14 +20,17 @@ body {
   display: grid;
   grid-gap: 15px 10px;
   color: #f05f40;
-  grid-template-columns: 1fr 1fr 1fr;
+  //grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 300px);
 
   @media screen and (max-width: 800px) {
-    grid-template-columns: 1fr 1fr;
+    //grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 300px);
   }
 
   @media screen and (max-width: 500px) {
-    grid-template-columns: 1fr;
+    //grid-template-columns: 1fr;
+    grid-template-columns: 300px;
   }
 
   .newCard {
@@ -107,10 +119,11 @@ body {
 
         p {
           margin: 0;
+          font-size: 18px;
         }
 
         .authorName {
-          align-self: center;
+          align-self: end;
         }
 
         .authorSocials {
