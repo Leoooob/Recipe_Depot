@@ -175,7 +175,21 @@ body {
       grid-gap: 5px;
       margin: 10px 0;
       grid-template-columns: 100px auto; }
+      .instructionsBlock ul .instructionStep:nth-child(odd) img {
+        grid-column: 1; }
+      .instructionsBlock ul .instructionStep:nth-child(odd) .instructionText {
+        grid-column: 2; }
+      .instructionsBlock ul .instructionStep:nth-child(even) {
+        grid-template-columns: auto 100px; }
+        .instructionsBlock ul .instructionStep:nth-child(even) img {
+          grid-column: 2; }
+        .instructionsBlock ul .instructionStep:nth-child(even) .instructionText {
+          grid-column: 1; }
       .instructionsBlock ul .instructionStep img {
-        width: 100%; }
-      .instructionsBlock ul .instructionStep p {
-        margin: 0; }
+        width: 100%;
+        grid-row: 1; }
+      .instructionsBlock ul .instructionStep .instructionText {
+        margin: 0;
+        grid-row: 1; }
+      .instructionsBlock ul .instructionStep.finalStep {
+        grid-template-columns: auto; }

@@ -20,16 +20,14 @@ body {
   display: grid;
   grid-gap: 15px 10px;
   color: #f05f40;
-  //grid-template-columns: 1fr 1fr 1fr;
   grid-template-columns: repeat(3, 300px);
 
+  // TODO: Update breakpoints
   @media screen and (max-width: 800px) {
-    //grid-template-columns: 1fr 1fr;
     grid-template-columns: repeat(2, 300px);
   }
 
   @media screen and (max-width: 500px) {
-    //grid-template-columns: 1fr;
     grid-template-columns: 300px;
   }
 
@@ -259,12 +257,40 @@ body {
       margin: 10px 0;
       grid-template-columns: 100px auto;
 
-      img {
-        width: 100%;
+      &:nth-child(odd) {
+        img {
+          grid-column: 1;
+        }
+
+        .instructionText {
+          grid-column: 2;
+        }
       }
 
-      p {
+      &:nth-child(even) {
+        grid-template-columns: auto 100px;
+
+        img {
+          grid-column: 2;
+        }
+
+        .instructionText {
+          grid-column: 1;
+        }
+      }
+
+      img {
+        width: 100%;
+        grid-row: 1;
+      }
+
+      .instructionText {
         margin: 0;
+        grid-row: 1;
+      }
+
+      &.finalStep {
+        grid-template-columns: auto;
       }
     }
   }
