@@ -8,7 +8,7 @@ html {
 }
 
 h1 {
-  margin: 5px 0;
+  margin: 0;
   color: #f05f40;
 }
 
@@ -54,10 +54,6 @@ body {
         color: #ff006a;
         outline-color: #fff;
         position: absolute;
-
-        &.notFavourited .fa {
-          font-weight: 500;
-        }
       }
 
       img {
@@ -79,15 +75,20 @@ body {
       }
     }
 
+    .cardGlyphs,
+    .cardAuthor {
+      .fas,
+      .far,
+      .fab {
+        color: #f05f40;
+      }
+    }
+
     .cardGlyphs {
       color: #333;
       display: grid;
       margin: 0 10px;
       grid-template-columns: 50% 50%;
-
-      .fa {
-        color: #f05f40;
-      }
     }
 
     .cardAuthor {
@@ -97,12 +98,6 @@ body {
       grid-template-columns: max-content auto;
       border-bottom-left-radius: 15px;
       border-bottom-right-radius: 15px;
-
-      h4 {
-        color: #333;
-        margin: 0;
-        grid-column-end: span 2;
-      }
 
       .authorImage {
         width: 50px;
@@ -132,68 +127,144 @@ body {
       }
     }
   }
+}
 
-  .recipe-card {
-    margin: 10px;
-    display: grid;
-    position: relative;
-    border-radius: 5px;
-    height: max-content;
-    justify-items: center;
+// Recipe page styles
+// TODO: Abstract to another scss file
 
-    img {
-      width: 100%;
-      box-shadow: 5px 5px 20px #333;
+.recipeHeader {
+  height: 230px;
+  background-image: url("../assets/images/webp/Pancakes.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.headerBlock {
+  padding: 5px;
+  display: grid;
+  grid-gap: 0 10px;
+  margin: 0 10vw;
+  background-color: #fff;
+  border: 1px solid lightgrey;
+  grid-template-columns: auto max-content;
+
+  .split {
+    .titleSubHeading {
+      margin: 0;
+      color: #999;
     }
 
-    h4 {
-      margin: 10px 0;
+    h3 {
+      margin: 0;
+      margin-top: 10px;
     }
 
-    &:hover {
-      .overlay {
-        opacity: 1;
-      }
+    .recipeAllergens {
+      margin: 0;
+      padding: 0;
+      column-count: 3;
+      list-style-type: square;
+      list-style-position: inside;
     }
 
-    .overlay {
-      opacity: 0;
-      width: 100%;
-      height: 100%;
-      color: #fff;
-      position: absolute;
-      text-align: center;
-      transition: all .35s;
-      -moz-transition: all .35s;
-      -webkit-transition: all .35s;
-      background: rgba(43, 10, 61,.7);
+    .buttons {
+      margin-top: 2px;
+      text-align: right;
 
-      .expand {
-        color: #fff;
+      .button {
+        margin: 0 5px;
         cursor: pointer;
-        font-size: 2rem;
-        background: none;
-        border-radius: 50%;
-        border-color: #fff;
+        font-size: x-large;
 
-        &:active {
-          border-style: double;
+        &.favourite {
+          color: #ff006a;
         }
       }
     }
 
-    aside {
-      color: #fff;
-      display: grid;
-      margin: 0 10px;
-      grid-template-columns: 1fr 1fr;
+    .recipeInfo {
+      .recipeTiming {
+        .fas,
+        .far {
+          color: #f05f40;
+        }
+      }
+    }
+  }
+}
 
-      .time {
-        text-align: left;
+.ingredientsBlock {
+  padding: 5px;
+  margin: 3vw 10vw;
+  background-color: #fff;
+  border: 1px solid lightgrey;
+
+  .ingredientsList {
+    padding: 0;
+    display: grid;
+    grid-gap: 10px 25px;
+    list-style-type: none;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, max-content);
+
+    .ingredientItem {
+      display: grid;
+      grid-gap: 15px;
+      border-radius: 10px;
+      grid-template-rows: 75px;
+      background-color: #f8f8f8;
+      grid-template-columns: max-content auto;
+
+      img {
+        border-radius: 25px;
+        height: 100%;
       }
 
-      .difficulty {
-        text-align: right;
+      p {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.utensilsBlock {
+  padding: 5px;
+  margin: 3vw 10vw;
+  background-color: #fff;
+  border: 1px solid lightgrey;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    column-count: 3;
+    list-style-type: square;
+    list-style-position: inside;
+  }
+}
+
+.instructionsBlock {
+  padding: 5px;
+  margin: 3vw 10vw;
+  background-color: #fff;
+  border: 1px solid lightgrey;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .instructionStep {
+      display: grid;
+      grid-gap: 5px;
+      margin: 10px 0;
+      grid-template-columns: 100px auto;
+
+      img {
+        width: 100%;
+      }
+
+      p {
+        margin: 0;
       }
     }
   }
