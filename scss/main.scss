@@ -260,6 +260,7 @@ body {
       display: grid;
       grid-gap: 5px;
       margin: 10px 0;
+      align-items: center;
       grid-template-columns: 100px auto;
 
       &:nth-child(odd) {
