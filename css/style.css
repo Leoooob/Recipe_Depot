@@ -14,7 +14,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-gap: 15px 10px;
+  grid-gap: 15px 25px;
   color: #f05f40;
   grid-template-columns: repeat(3, 300px); }
   @media screen and (max-width: 800px) {
@@ -27,8 +27,9 @@ body {
     display: grid;
     position: relative;
     border-radius: 15px;
-    background-color: #f0efef;
-    box-shadow: 5px 5px 30px #999; }
+    background-color: #f0efef; }
+    .grid-container .newCard:hover {
+      box-shadow: 5px 5px 30px #999; }
     .grid-container .newCard img {
       max-width: 100%; }
     .grid-container .newCard .cardImage {
@@ -46,7 +47,8 @@ body {
     .grid-container .newCard .cardTitle {
       margin: 2px 10px; }
       .grid-container .newCard .cardTitle h3 {
-        margin: 0; }
+        margin: 0;
+        cursor: pointer; }
       .grid-container .newCard .cardTitle .titleSubHeading {
         margin: 0;
         color: #3d3d3d; }
@@ -64,7 +66,7 @@ body {
       grid-template-columns: 50% 50%; }
     .grid-container .newCard .cardAuthor {
       display: grid;
-      margin: 0 10px;
+      margin: 0 10px 5px;
       grid-gap: 0 10px;
       grid-template-columns: max-content auto;
       border-bottom-left-radius: 15px;

@@ -18,7 +18,7 @@ body {
 
 .grid-container {
   display: grid;
-  grid-gap: 15px 10px;
+  grid-gap: 15px 25px;
   color: #f05f40;
   grid-template-columns: repeat(3, 300px);
 
@@ -36,7 +36,10 @@ body {
     position: relative;
     border-radius: 15px;
     background-color: #f0efef;
-    box-shadow: 5px 5px 30px #999;
+
+    &:hover {
+      box-shadow: 5px 5px 30px #999;
+    }
 
     img {
       max-width: 100%;
@@ -65,6 +68,7 @@ body {
 
       h3 {
         margin: 0;
+        cursor: pointer;
       }
 
       .titleSubHeading {
@@ -91,7 +95,7 @@ body {
 
     .cardAuthor {
       display: grid;
-      margin: 0 10px;
+      margin: 0 10px 5px;
       grid-gap: 0 10px;
       grid-template-columns: max-content auto;
       border-bottom-left-radius: 15px;
@@ -119,6 +123,7 @@ body {
           align-self: end;
         }
 
+        // TODO: Use grid to sort the gap between buttons
         .authorSocials {
           cursor: pointer;
         }
