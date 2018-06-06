@@ -25,10 +25,10 @@ gulp.task('sass', function() {
 });
 
 gulp.task('css', function(){
-   gulp.src('./root/css/style.css')
-   .pipe(concat('style.css'))
-   .pipe(minify())
-   .pipe(rename('style.css'))
-   .pipe(gulp.dest('./dist/css/'))
-   .pipe(browserSync.stream());
+  gulp.src('./root/css/style.css')
+    .pipe(concat('style.css'))
+    .pipe(minify())
+    .pipe(rename('style.css'))
+    .pipe(gulp.dest('./dist/css/'))
+    .pipe(browserSync.stream());
 });
