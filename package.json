@@ -25,6 +25,6 @@
     "gulp-sass": "^3.2.1"
   },
   "dependencies": {
-    "npm": "^6.1.0"
+    "npm": "^6.13.4"
   }
 }
